@@ -1,0 +1,96 @@
+Public Const gsHojaTemporal = "ImpoTemp"
+Public Const msTituloPPA = "INTERBANK"
+Public Const gsMensajeErrorRestrictivo = "Nro. Doc. Identidad diferentes con misma cuenta"
+Public Const gsHojaTempExp = "ExpoTemp"
+Public Const gsHojaTempImp = "ImpoTemp"
+Public gsHojaDetalleREM As String
+Public Const gsHojaDetalleVAR = "Detalle Pagos Varios"
+Public Const gsPassword = "xls"
+
+Type RegDetalleREM
+    CODCTRL     As String * 2
+    CODBENEF    As String * 20
+    TIPOPERA    As String * 1
+    NRODOCUM    As String * 20
+    FVCTODOC    As String * 8
+    MONOPERA    As String * 2
+    IMPOPERA    As String * 15
+    INDBANCO    As String * 1
+    TIPABONO    As String * 2
+    PRODUCTO    As String * 3
+    moneda      As String * 2
+    OFICINA     As String * 3
+    NROCTA      As String * 20
+    TIPBENEF    As String * 1
+    TIPDOCIDE   As String * 2
+    NRODOCIDE   As String * 15
+    NOMBENEF    As String * 60
+    MONESUELD   As String * 2
+    IMPSUELD    As String * 15
+    FILLER      As String * 6
+    NROCEL      As String * 40  'IQ PROJECT
+    CORREO      As String * 140 'IQ PROJECT
+End Type
+
+Type RegDetallePRV
+    CODCTRL     As String * 2
+    CODBENEF    As String * 20
+    TIPOPERA    As String * 1
+    NRODOCUM    As String * 20
+    FVCTODOC    As String * 8
+    MONOPERA    As String * 2
+    IMPOPERA    As String * 15
+    INDBANCO    As String * 1
+    TIPABONO    As String * 2
+    PRODUCTO    As String * 3
+    moneda      As String * 2
+    OFICINA     As String * 3
+    NROCTA      As String * 20
+    TIPBENEF    As String * 1
+    TIPDOCIDE   As String * 2
+    NRODOCIDE   As String * 15
+    NOMBENEF    As String * 60
+    RETOPERA    As String * 15
+    NROCEL      As String * 40  'IQ PROJECT
+    CORREO      As String * 140 'IQ PROJECT
+    FILLER      As String * 8
+End Type
+
+Type RegDetalleVAR
+    CODCTRL     As String * 2
+    CODBENEF    As String * 20
+    TIPOPERA    As String * 1
+    NRODOCUM    As String * 20
+    FVCTODOC    As String * 8
+    MONOPERA    As String * 2
+    IMPOPERA    As String * 15
+    INDBANCO    As String * 1
+    TIPABONO    As String * 2
+    PRODUCTO    As String * 3
+    moneda      As String * 2
+    OFICINA     As String * 3
+    NROCTA      As String * 20
+    TIPBENEF    As String * 1
+    TIPDOCIDE   As String * 2
+    NRODOCIDE   As String * 15
+    NOMBENEF    As String * 60
+    NROCEL      As String * 40  'IQ PROJECT
+    CORREO      As String * 140 'IQ PROJECT
+    FILLER      As String * 23
+End Type
+
+Public RegDetREM            As RegDetalleREM
+Public gsNo_archivo         As String
+Public gsNo_archivo_tmp     As String
+Public gsErrorRestrictivo   As Boolean
+Public gsHojaDetalle        As String
+Public RegDetPRV            As RegDetallePRV
+Public lsNomArchCol         As String
+Public liNumRegTot          As Integer
+Public lsArchTemp           As String
+Public gsRubro              As String
+Public RegDetVAR            As RegDetalleVAR
+Public gsNomArchSave        As String
+Public totalReg             As String
+Public totalSoles           As String
+Public totalDolares         As String
